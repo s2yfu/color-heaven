@@ -51,11 +51,8 @@ Primary Deep Blue: #0d325a
 Accent Cream: #f2e9c1
 
 📖 How to Use
-Clone the Repo:
+Clone the Repo or open the link in the top 
 
-Bash
-git clone https://github.com/YourUsername/color-heaven.git
-Open index.html in any modern browser.
 
 Pick a base color and let the engine calculate the harmonies.
 
