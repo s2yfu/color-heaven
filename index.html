@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Color Heaven — Palette Generator</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ========== HEADER / LOGO ========== -->
+  <header class="site-header">
+    <div class="header-inner">
+      <!-- Replace src with your actual banner path -->
+      <img src="banner_1.png" alt="Color Heaven Logo" class="site-logo" onerror="this.style.display='none'; document.getElementById('logo-fallback').style.display='flex';" />
+      <!-- Fallback if banner not found -->
+      <div id="logo-fallback" class="logo-fallback" style="display:none;">
+        <div class="logo-icon">🐼</div>
+        <span class="logo-text">Color Heaven</span>
+      </div>
+      <p class="site-tagline">Professional Color Palettes, Instantly.</p>
+    </div>
+  </header>
+
+  <!-- ========== MAIN CONTENT ========== -->
+  <main class="main-content">
+
+    <!-- Color Picker Card -->
+    <section class="picker-section">
+      <div class="picker-card">
+        <label class="picker-label" for="baseColor">
+          <span class="label-icon">✦</span>
+          Pick your base color
+        </label>
+        <div class="picker-controls">
+          <div class="color-preview-wrap">
+            <input type="color" id="baseColor" value="#1e7fcb" class="color-input" aria-label="Base color picker" />
+            <div class="color-preview" id="colorPreview"></div>
+          </div>
+          <input type="text" id="hexInput" class="hex-input" value="#1e7fcb" maxlength="7" placeholder="#000000" aria-label="Hex color value" />
+          <button class="generate-btn" id="generateBtn" aria-label="Generate palettes">
+            <span class="btn-text">Generate</span>
+            <span class="btn-shimmer"></span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Palette Output Grid -->
+    <section class="palettes-section" id="palettesSection" aria-live="polite">
+      <!-- Palettes are injected here by JS -->
+    </section>
+
+  </main>
+
+  <!-- ========== TOAST NOTIFICATION ========== -->
+  <div class="toast" id="toast" role="status" aria-live="polite">Copied to clipboard!</div>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="site-footer">
+    <p>Made with 💛 by <strong>Color Heaven</strong> &nbsp;·&nbsp; © 2025</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
